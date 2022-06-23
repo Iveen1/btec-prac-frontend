@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let package of festivePackages">
+      <div class="card mt-3">
+        <img src="assets/static/product.png">
+        <h1>{{package.name}}</h1>
+        <p>{{package.title}}</p>
+        <p>{{package.price}}$</p>
+        <br>
+        <a class="orderbtn" [routerLink]="['/product', package.id]">Заказать <i class="bi bi-bag-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

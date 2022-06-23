@@ -1,0 +1,9 @@
+.navbar-light .navbar-nav .nav-link.active-link {
+  color: #FFB273;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+  font-weight: 700;
+}

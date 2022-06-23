@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6" *ngIf="product">
+      <img src="assets/static/product.png" width="50%"/>
+      <h1 class="mt-3">{{product.name}}</h1>
+      <h4>{{product.price}}$</h4>
+      <p *ngIf="product.title; else elseBlock">{{product.title}}</p>
+      <ng-template #elseBlock> <p class="darkText">Описание отсутствует</p> </ng-template>
+    </div>
+
+    <div class="col-lg-5">
+      <h1>Форма заказа</h1>
+      <form name="form" (ngSubmit)="onSubmit()">
+        <input name="fcs" [(ngModel)]="form.fcs" type="text" class="form-control" placeholder="Введите ФИО" required/>
+        <input name="phone" [(ngModel)]="form.phone" type="text" class="form-control" mask="+0 (000) 000-00-00" placeholder="Введите номер телефона" required/>
+        <input name="amount" [(ngModel)]="form.amount" type="number" min="1" class="form-control" placeholder="Введите количество" required/>
+        <button type="submit" class="btn btn-md btn-dark mt-3">Заказать</button>
+      </form>
+      <br>
+      <div *ngIf="isSuccess" class="alert alert-success">
+        Заказ принят, с вами скоро свяжутся.
+      </div>
+      <div *ngIf="!isSuccess && isSubmitted" class="alert alert-danger">
+        Произошла ошибка. Возможно, вы неверно указали какие-то поля.
+      </div>
+
+    </div>
+  </div>
+</div>

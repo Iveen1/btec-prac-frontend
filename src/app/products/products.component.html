@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let service of services">
+      <div class="card mt-3">
+        <img src="assets/static/product.png">
+        <h1>{{service.name}}</h1>
+        <p>{{service.title}}</p>
+        <p>{{service.price}}$</p>
+        <br>
+        <a class="orderbtn" [routerLink]="['/product', service.id]">Заказать&nbsp;<i class="bi bi-bag-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

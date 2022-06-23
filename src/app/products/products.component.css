@@ -1,0 +1,32 @@
+.card {
+  padding: 10px 10px;
+  min-height: 500px;
+  background-color: #9EBDFF;
+  position:relative;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card h1 {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.orderbtn {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%); -webkit-transform: translateX(-50%);
+  width: 80%;
+  color: #000;
+  background-color: #FFB273;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

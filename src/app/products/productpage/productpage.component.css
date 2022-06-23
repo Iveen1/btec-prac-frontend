@@ -1,0 +1,19 @@
+form {
+  margin-top: 10%;
+  width: 100%;
+}
+img {
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 70%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.darkText {
+  color: darkgray;
+}
+
+input {
+  margin-bottom: 4px;
+}

@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="main-text">
+    <h1>Отдых на лыжах и обучение</h1>
+    <br>
+    <a routerLink="about">Подробнее о нас</a>
+  </div>
+</div>
+
+<div class="container mt-4 mb-4">
+  <h1 class="text-center">Наши услуги</h1>
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let service of services">
+      <div class="card" routerLink="product/{{service.id}}">
+        <img src="assets/static/product.png"/>
+        <h1>{{service.name}}</h1>
+        <p>Цена: {{service.price}}$</p>
+        <div class="moreInfoButton">
+          <h1>Подробнее</h1>
+        </div>
+      </div>
+    </div>
+    <a routerLink="products" class="moreaboutbtn">Больше услуг <i class="bi bi-arrow-down-short"></i></a>
+  </div>
+
+  <br>
+  <h1 class="text-center">Праздничные пакеты</h1>
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let package of festivePackages">
+      <div class="card" routerLink="product/{{package.id}}">
+        <img src="assets/static/product.png"/>
+        <h1>{{package.name}}</h1>
+        <p>Цена: {{package.price}}$</p>
+        <div class="moreInfoButton">
+          <h1>Подробнее</h1>
+        </div>
+      </div>
+    </div>
+    <a routerLink="packets" class="moreaboutbtn">Больше пакетов <i class="bi bi-arrow-down-short"></i></a>
+  </div>
+</div>
