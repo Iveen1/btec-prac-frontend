@@ -4,7 +4,8 @@
   background-position: bottom;
   background-size: cover;
   -webkit-clip-path: circle(75% at 65% 10%);
-  clip-path: circle(75% at 65% 10%);
+  clip-path: circle(95% at 85% 10%);
+  position: relative;
 }
 .main-text {
   top: 30%;
